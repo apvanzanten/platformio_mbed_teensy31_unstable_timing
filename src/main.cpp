@@ -1,4 +1,5 @@
 #include "mbed.h"
+#include "rtos.h"
 
 DigitalOut myled(LED1); // Onboard LED
  
@@ -8,7 +9,7 @@ DigitalOut myled(LED1); // Onboard LED
  
 int main() {
     Ticker t;
-    t.attach(&step, 0.1);
+    t.attach(&step, 0.100001);
     while(1) {
         wait(1);
     }
